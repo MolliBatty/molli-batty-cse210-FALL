@@ -1,5 +1,5 @@
 # cse210-student-template
-MOlli Batty's CSE 210 Repository
+Molli Batty's CSE 210 Repository
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 
