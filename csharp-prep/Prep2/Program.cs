@@ -10,23 +10,23 @@ class Program
 
         if (grade >= 90)
         {
-            Console.WriteLine($"You have an A");
+            Console.WriteLine($"You have an A.");
         }
         else if (grade >= 80)
         {
-            Console.WriteLine($"You have a B");
+            Console.WriteLine($"You have a B.");
         }
         else if (grade >= 70)
         {
-            Console.WriteLine($"You have a C");
+            Console.WriteLine($"You have a C.");
         }
         else if(grade >= 60)
         {
-            Console.WriteLine($"You have a D");
+            Console.WriteLine($"You have a D.");
         }
         else
         {
-            Console.WriteLine($"You have failed");
+            Console.WriteLine($"You have an F.");
         }
 
         if (grade >= 70)
