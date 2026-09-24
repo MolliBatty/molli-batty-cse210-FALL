@@ -7,7 +7,7 @@ class Program
         int grade;
         Console.Write("What is your grade? ");
         grade = int.Parse(Console.ReadLine());
-        int lastDigit = grade %10;
+        int lastDigit = grade % 10;
         string sign;
 
         if (grade >= 90)
