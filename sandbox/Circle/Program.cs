@@ -7,7 +7,7 @@ class Program
     {
         Circle myCircle = new Circle(); //myCircle is object
 
-        myCircle._radius = 10;
+        // myCircle.SetRadius(10);
 
         double area = myCircle.GetArea();
         
