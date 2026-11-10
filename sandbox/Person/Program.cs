@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System.Data;
+
+class Program
 {
     public static void DisplayPersonInfo(Person person)
     {
@@ -12,12 +14,14 @@
         //     }
         //     else
         //     {
+
+                Console.Write($"Salary: {person.GetSalary()}, ");
                 Console.WriteLine(person.GetPersonInformation());
         //     }
     }
     public static void Main()
     {
-        Person myPerson = new Person("Molli", "Batty", 22, 115.21);
+        // Person myPerson = new Person("Molli", "Batty", 22, 115.21);
         // Console.WriteLine(myPerson.GetPersonInformation());
 
         Doctor myDoctor = new Doctor("Bob", "Payen", 45, 279, "Knife");
@@ -31,7 +35,7 @@
 
         List<Person> myPeople = new List<Person>();
 
-        myPeople.Add(myPerson);
+        // myPeople.Add(myPerson);
         myPeople.Add(myDoctor);
         myPeople.Add(myPolice);
         myPeople.Add(mypolice);
@@ -50,4 +54,6 @@
             // }
         }
     }
+
+    
 }
