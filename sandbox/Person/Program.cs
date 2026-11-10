@@ -27,12 +27,14 @@
 
         Police myPolice = new Police("Gary", "Goodman", 61, 181, "Guns");
         // Console.WriteLine(myPolice.GetPolicerInformation());
+        Police mypolice = new Police("Tabatha", "Dorry", 29, 145, "Baton");
 
         List<Person> myPeople = new List<Person>();
 
         myPeople.Add(myPerson);
         myPeople.Add(myDoctor);
         myPeople.Add(myPolice);
+        myPeople.Add(mypolice);
 
         foreach(Person person in myPeople)
         {
