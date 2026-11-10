@@ -1,19 +1,19 @@
 ﻿class Program
 {
-    public static void DisplayPersonINfo(Person person)
+    public static void DisplayPersonInfo(Person person)
     {
-        if(person is Doctor doctor)
-            {
-                Console.WriteLine(doctor.GetDoctorInformation());
-            }
-            else if (person is Police p)
-            {
-                Console.WriteLine(p.GetPolicerInformation());
-            }
-            else
-            {
+        // if(person is Doctor doctor)
+        //     {
+        //         Console.WriteLine(doctor.GetDoctorInformation());
+        //     }
+        //     else if (person is Police p)
+        //     {
+        //         Console.WriteLine(p.GetPolicerInformation());
+        //     }
+        //     else
+        //     {
                 Console.WriteLine(person.GetPersonInformation());
-            }
+        //     }
     }
     public static void Main()
     {
@@ -36,8 +36,8 @@
 
         foreach(Person person in myPeople)
         {
-            DisplayPersonINfo(person);
-            
+            DisplayPersonInfo(person);
+
             // if(person is Doctor doctor)
             // {
             //     Console.WriteLine(doctor.GetDoctorInformation());
