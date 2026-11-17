@@ -3,7 +3,7 @@ sealed class Intern : Employee
     private string _school;
     private decimal _Stipend;
 
-    public Intern(string name, int id, decimal BaseSalary, string school decimal Stipend)
+    public Intern(string name, int id, decimal BaseSalary, string school, decimal Stipend)
         :base(name, id, BaseSalary)
     {
         _school = school;
