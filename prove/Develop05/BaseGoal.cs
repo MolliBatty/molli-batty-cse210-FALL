@@ -25,10 +25,19 @@ abstract class BaseGoal
         _goalType = goalType;
     }
 
+    protected string GetName()
+    {
+        return _name;
+    }
     private void SetName()
     {
         Console.WriteLine("What is the name of your goal: ");
         _name = Console.ReadLine();
+    }
+
+    protected string GetDescription()
+    {
+        return _description;
     }
     private void SetDescription()
     {
@@ -36,10 +45,26 @@ abstract class BaseGoal
         _description = Console.ReadLine();
     }
 
+
+    protected int GetPoints()
+    {
+        return _points;
+    }
     private void SetPoints()
     {
         Console.WriteLine($"What are the points for {_name} goal: ");
-        _points = int.Parse(Console.ReadLine());
+
+        int points;
+        while(!int.TryParse(Console.ReadLine(), out points))
+        {
+            Console.WriteLine("Thats not a number. Try again!");
+        }
+        _points = points;
+    }
+
+    protected bool GetStatus()
+    {
+        return _complete;
     }
     public virtual string GetConsoleString()
     {
@@ -56,6 +81,11 @@ abstract class BaseGoal
     {
         _complete = true;
         return _points;
+    }
+
+    public virtual string GetFileSystemString()
+    {
+        return $"{_goalType}|{_name}|{_description}|{_points}|{_complete}";
     }
 
     public abstract int RecordEvent();

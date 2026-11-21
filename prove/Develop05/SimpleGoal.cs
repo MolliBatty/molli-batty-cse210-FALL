@@ -1,7 +1,9 @@
+using System.Runtime.Serialization;
+
 class SimpleGoal : BaseGoal
 {
-    public SimpleGoal(string name, string description, int points, bool complete, string goalType)
-        : base("name, description, points, complete, goalType")
+    public SimpleGoal(string name, string description, int points, bool complete)
+        : base(name, description, points, complete, "SimpleGoal")
     {
         
     }
@@ -13,7 +15,15 @@ class SimpleGoal : BaseGoal
 
     public override int RecordEvent()
     {
-        // TODO!!!!!!!!!!!!!!
-        return 0;
+        if (GetStatus())
+        {
+            Console.WriteLine("You already did this one!");
+            return 0;
+        }
+        else
+        {
+            return MarkComplete();
+        }
+
     }
 }
